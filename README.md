@@ -3,6 +3,18 @@
 https://github.com/yurihikari
 ## Description
 VPNStop is a plugin that will block VPN, OpenVPN, Proxy, Tor, Mobile, Business and Hosting connections from joining your server. It will also block any IP that is not in the whitelist.
+**Version** 1.1.0
+## QuickStart
+### Download the plugin
+Download the latest version of the plugin from here
+### Install the plugin
+Copy the plugin jar file to your plugins folder.
+### Configure the plugin
+Edit the config.yml file to your liking. You can find the config file in the plugins/VPNStop folder.
+### Get an API key
+You can get an API key from https://proxycheck.io/
+
+You're done! Now you can start your server and enjoy the plugin.
 ## Commands
 
 ### Default command. Will list the available commands
@@ -49,12 +61,15 @@ VPNStop is a plugin that will block VPN, OpenVPN, Proxy, Tor, Mobile, Business a
    default: op
  ```
  
- ## Default Config file
+ ## Config file
  ```yml
  # EDIT THOSE LINES WITH YOUR OWN API KEY AND API URL FROM PROXYCHECK.IO
 api_url: "https://proxycheck.io/v2/" # API URL
 api_key: "Use your own api key" # API KEY
-# EDIT THOSE LINES TO CUSTOMIZE THE PLUGIN
+# EDIT THOSE LINES FOR CUSTOMIZING THE PLUGIN BEHAVIOR
+# The plugin will launch this command when a player is blocked. %player% will be replaced by the player name and %ip% by the player IP and %reason% by the reason of the kick
+on_bad_ip: "broadcast %player% tried to join the server with IP %ip% but was blocked by VPNStop : %reason%"
+# EDIT THOSE LINES TO CUSTOMIZE THE PLUGIN MESSAGES
 kick_message: "Your IP is not allowed to join this server." # The message that will be sent to an unknown IP
 vpn_kick_message: "You are using a VPN connection. Please disable it and try again." # The message that will be sent to a VPN IP
 openvpn_kick_message: "You are using a OpenVPN connection. Please disable it and try again." # The message that will be sent to a OpenVPN IP
