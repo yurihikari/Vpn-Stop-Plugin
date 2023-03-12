@@ -3,7 +3,7 @@
 https://github.com/yurihikari
 ## Description
 VPNStop is a plugin that will block VPN, OpenVPN, Proxy, Tor, Mobile, Business and Hosting connections from joining your server. It will also block any IP that is not in the whitelist.
-**Version** 1.1.0
+**Version** 1.2
 ## QuickStart
 ### Download the plugin
 Download the latest version of the plugin from here
@@ -33,9 +33,13 @@ You're done! Now you can start your server and enjoy the plugin.
 ```
 /vpnstop help
 ```
-### Show the plugin info
+### Show the player info
 ```
-/vpnstop info
+/vpnstop info <name>
+```
+### Check another player IP address again
+```
+/vpnstop check <name>
 ```
 
 ## Permissions
@@ -55,6 +59,9 @@ You're done! Now you can start your server and enjoy the plugin.
     default: op
   vpnstop.command.info:
    description: Allows players to get info about the plugin
+   default: op
+  vpnstop.command.check:
+   description: Allows player to check another player IP address again
    default: op
   vpnstop.commands:
    description: Allows players to use VPNStop commands
